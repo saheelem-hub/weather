@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+ body {
+    background-color: #f2f5f9;
+    color: #222;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+.theme-toggle {
+    text-align: right;
+}
+button, input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.weather-card {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+} */
+#forecast {
+    margin-top: 20px;
+}
+#forecastDays {
+    display: flex;
+    gap: 10px;
+}
+#forecastDays div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 2;
+    min-width: 120px;
+}
+#loading {
+    margin: 15px 0;
+    color: #007bff;
+}
+#errorMsg {
+    color: red;
+    margin: 10px 0;
+}
+.favorites-section {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+#favoritesList div {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+#favoritesList span {
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="themeBtn">dark</button>
+        </div>
+        <br>
+        <div class="search-section">
+            <input type="text" id="cityInput" spellcheck="false" placeholder="Enter city name..." />
+            <button id="searchBtn">Search Weather</button>
+        </div>
+        <div id="weatherCard" class="weather-card" style="display: none"></div>
+        <div id="loading" style="display: none;">Loading...</div>
+        <div id="forecast"></div>
+        <div id="errorMsg" class="error" style="display: none;"></div>
+        <div class="favorites-section">
+            <h3>Favorites</h3>
+            <div>
+            <button id="add">Add to favourite</button>
+            </div>
+
+            <div id="favoritesList"></div>
+        </div>
+    </div>
+    <script src="machinetask.js"></script>
+
+</body>
+
+</html>
